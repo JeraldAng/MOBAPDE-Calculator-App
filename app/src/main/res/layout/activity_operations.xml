@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".Operations">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="operations screen"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="+"
+            android:onClick="Add"/>
+
+        <Button
+            android:id="@+id/btnSub"
+            android:text="-"
+            android:onClick="Subtract"/>
+
+        <Button
+            android:id="@+id/btnMul"
+            android:text="x"
+            android:onClick="Multiply"/>
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:text="/"
+            android:onClick="Divide"/>
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="="
+            android:onClick="Equate"/>
+
+    </GridLayout>
+
+</LinearLayout>
